@@ -12,6 +12,33 @@ namespace DotNetSandBox
 
         public static void Main(string[] args)
         {
+            Scenario04Execution();
+        }
+
+        public static void Scenario04Execution()
+        {
+            int[] arrayTest = new int[] { 2, 1, 3 };
+            int[] arrayTest2 = new int[] { 90, 1, 11, 30, 120 };
+
+            var asDesArray = new Scenario04(arrayTest2);
+            asDesArray.SetAscendentArray();
+            asDesArray.SetDescendentArray();
+
+            ArrayPrinter(asDesArray.GetAscendentArray());
+            Console.WriteLine();
+            ArrayPrinter(asDesArray.GetDescendentArray());
+        }
+
+        public static void ArrayPrinter(int[] array)
+        {
+            foreach (int element in array)
+            {
+                Console.WriteLine(element);
+            }
+        }
+
+        public static void Scenario03Execution()
+        {
             Scenario03 scenario03 = new Scenario03();
 
             var firstNumber = _integerWriters.IntWriter("Enter the first number please: ");
